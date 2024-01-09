@@ -31,4 +31,11 @@ jobs:
     - name: Build
       run: yarn build
     - name: Run Tests
-      run: yarn test
+      run: yarn test:cov
+    - name: Upload Coverage Report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: coverage/ # adjust this to the path of your coverage report directory
+
+
