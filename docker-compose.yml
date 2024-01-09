@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  db:
+    container_name: postgres_db
+    image: postgres:latest
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: assignment-db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    depends_on:
+      - app
+
+  app:
+    container_name: tech-assignment_app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:3000'
+    environment:
+      - DATABASE_URL=postgres://postgres:password@db:5432/postgres
+    # depends_on:
+    #   - db
+
+volumes:
+  postgres_data:
