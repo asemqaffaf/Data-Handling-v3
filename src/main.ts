@@ -8,7 +8,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('Tech Assignment')
     .setDescription(
-      'Tech Assignment - Backend Data Handling v3 - please use this token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiU2VsZW5hLlBoYW1AaGF5cy5jby5qcCIsImV4cCI6MTczNjM0MjMxNn0.gaD3SyxT7UwVm5kUMUhtDhHEpxmQ4cCq7v5S3qXN-VQ',
+      'Data Handling v3 - please use this token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiU2VsZW5hLlBoYW1AaGF5cy5jby5qcCIsImV4cCI6MTczNjM0MjMxNn0.gaD3SyxT7UwVm5kUMUhtDhHEpxmQ4cCq7v5S3qXN-VQ',
     )
     .setVersion('1.0')
     .addTag('Tech Assignment')

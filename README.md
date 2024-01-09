@@ -1,72 +1,86 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+# Data Handling v3
 
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## Docker
+
+## Running the app (Docker)
 
 ```bash
-$ yarn install
+# docker-compose up build command.
+$ yarn compose:up
+
 ```
 
-## Running the app
+
+## Installation (Local - node.js)
 
 ```bash
-# development
-$ yarn run start
+$ yarn
+```
 
-# watch mode
-$ yarn run start:dev
+## Running the app (Local)
 
-# production mode
-$ yarn run start:prod
+```bash
+# Development mode
+$ yarn start
+
+# Watch mode
+$ yarn start:dev
+
+# Production mode
+$ yarn start:prod
 ```
 
 ## Test
 
 ```bash
-# unit tests
-$ yarn run test
+# Run unit tests
+$ yarn test
 
-# e2e tests
-$ yarn run test:e2e
+# Run end-to-end tests
+$ yarn test:e2e
 
-# test coverage
-$ yarn run test:cov
+# Generate test coverage
+$ yarn test:cov
+
+# Run tests in watch mode
+$ yarn test:watch
 ```
 
-## Support
+# Swagger API Documentation
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+## Accessing the Documentation
 
-## Stay in touch
+This project includes an interactive API documentation using Swagger UI, which provides a convenient way to explore and test the API endpoints.
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+To access the Swagger UI:
+
+1. Ensure the application is running (either locally or in a Docker container).
+2. Open a web browser and navigate to [http://localhost:3000/api/](http://localhost:3000/api/).
+
+## Features of Swagger UI
+
+- **Interactive Documentation**: View detailed information about all API endpoints, including HTTP methods, request parameters, and response.
+- **Schema Visualization**: Swagger provides a clear visualization of the API's data models.
+
+## Navigating the Swagger UI
+
+- **Endpoints List**: The main page lists all available API endpoints grouped by resource type.
+- **Endpoint Details**: Click on any endpoint to expand its details. so you can view the request format, required parameters, and response schema.
+
+## Using Swagger for Testing
+
+- **Authentication**: If the API requires authentication, you can add authentication tokens or credentials as needed (I left the token key in the description first line, so please use it to access any api under Users collections).
+- **Customization**: Modify request parameters as required to test different scenarios.
+
+- **Demo-Token**: ```eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiU2VsZW5hLlBoYW1AaGF5cy5jby5qcCIsImV4cCI6MTczNjM0MjMxNn0.gaD3SyxT7UwVm5kUMUhtDhHEpxmQ4cCq7v5S3qXN-VQ```
+
+## Note
+
+The Swagger UI is only accessible when the application is running and is configured to include Swagger. Make sure that the Swagger setup is correctly implemented in the application code.
 
 ## License
 
