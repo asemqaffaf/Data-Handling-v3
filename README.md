@@ -80,7 +80,7 @@ To access the Swagger UI:
 
 ## Note
 
-The Swagger UI is only accessible when the application is running and is configured to include Swagger. Make sure that the Swagger setup is correctly implemented in the application code.
+The Swagger UI is only accessible when the application is running and is configured to include Swagger.
 
 ## License
 
